@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AudioBook</string>
+    <string name="library">Library</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="library_button">Library</string>
+    <string name="author_credit">By: %s</string>
+    <string name="book_image_description">Book Image</string>
+</resources>
