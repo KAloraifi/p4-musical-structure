@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class NowPlaying extends AppCompatActivity {
+public class NowPlaying extends AppCompatActivity implements View.OnClickListener {
+    ImageButton playPause;
+    Button library;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +33,22 @@ public class NowPlaying extends AppCompatActivity {
         bookAuthor.setText(bookAuthorText);
 
         // Set OnClickListener on play button to toggle between play and pause.
-        final ImageButton playPause = findViewById(R.id.play_button);
-        playPause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        playPause = findViewById(R.id.play_button);
+        playPause.setOnClickListener(this);
+
+        // Assign OnClickListener on Library button to go back to MainActivity.
+        library = findViewById(R.id.library_button);
+        library.setOnClickListener(this);
+
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+            // case playPause button is pressed.
+            case R.id.play_button:
                 Drawable drawable = playPause.getDrawable();
                 if (drawable.getConstantState().equals(
                         getResources().getDrawable(R.drawable.ic_play_circle_filled_black_48px).getConstantState())) {
@@ -43,16 +57,12 @@ public class NowPlaying extends AppCompatActivity {
                 } else {
                     playPause.setImageResource(R.drawable.ic_play_circle_filled_black_48px);
                 }
-            }
-        });
+                break;
 
-        // Assign OnClickListener on Library button to go back to MainActivity.
-        Button button = (Button) findViewById(R.id.library_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            // case library button is pressed.
+            case R.id.library_button:
                 finish();
-            }
-        });
+                break;
+        }
     }
 }

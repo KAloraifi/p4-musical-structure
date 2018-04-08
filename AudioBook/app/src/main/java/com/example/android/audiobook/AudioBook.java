@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by Aloraifi on 07/04/2018.
  */
 
-public class AudioBook implements Parcelable{
+public class AudioBook implements Parcelable {
     private String mTitle;
     private String mAuthor;
 

@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Populate the audioBooks ArrayList with AudioBook instances.
         final ArrayList<AudioBook> audioBooks = new ArrayList<AudioBook>();
-        audioBooks.add(new AudioBook("Elon Musk", "Ashlee Vance"));
-        audioBooks.add(new AudioBook("Deep Work", "Cal Newport"));
-        audioBooks.add(new AudioBook("Mr. Mercedes", "Stephen King"));
-        audioBooks.add(new AudioBook("Ego Is The Enemy", "Ryan Holiday"));
-        audioBooks.add(new AudioBook("A Brief History of Time", "Stephen Hawking"));
-        audioBooks.add(new AudioBook("Never Split The Difference", "Chris Voss"));
-        audioBooks.add(new AudioBook("Algorithms to Live By", "Brian Christian"));
-        audioBooks.add(new AudioBook("When Breath Becomes Air", "Paul Kalanithi"));
-        audioBooks.add(new AudioBook("Unbroken", "Laura Hillenbrand"));
-        audioBooks.add(new AudioBook("Algorithms to Live By", "Brian Christian"));
+        audioBooks.add(new AudioBook(getString(R.string.book_1_title), getString(R.string.book_1_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_2_title), getString(R.string.book_2_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_3_title), getString(R.string.book_3_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_4_title), getString(R.string.book_4_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_5_title), getString(R.string.book_5_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_6_title), getString(R.string.book_6_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_7_title), getString(R.string.book_7_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_8_title), getString(R.string.book_8_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_9_title), getString(R.string.book_9_author)));
+        audioBooks.add(new AudioBook(getString(R.string.book_10_title), getString(R.string.book_10_author)));
 
         // Create A custom Adaper (i.e. AudioBookAdapter) and set it to the empty list.
         AudioBookAdapter itemsAdapter = new AudioBookAdapter(this, audioBooks);
@@ -54,5 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        this.setTitle(R.string.library);
     }
 }

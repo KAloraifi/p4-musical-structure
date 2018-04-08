@@ -4,17 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="8dp">
+    android:padding="@dimen/root_view_padding">
 
     <ImageView
         android:id="@+id/play_icon"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/weight_width"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
+        android:contentDescription="@string/play_icon"
         android:src="@drawable/ic_play_circle_outline_black_48px" />
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/weight_width"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:orientation="vertical">
@@ -23,7 +24,7 @@
             android:id="@+id/book_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="@dimen/book_info_vertical_margin"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
             tools:text="hello" />

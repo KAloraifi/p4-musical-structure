@@ -18,7 +18,8 @@
         </activity>
         <activity
             android:name=".NowPlaying"
-            android:label="@string/now_playing">
+            android:label="@string/now_playing"
+            android:parentActivityName="com.example.android.audiobook.MainActivity">
 
         </activity>
     </application>
